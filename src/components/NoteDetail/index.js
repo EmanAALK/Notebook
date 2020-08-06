@@ -3,7 +3,6 @@ import { Link, Redirect, useParams } from "react-router-dom";
 import { observer } from "mobx-react";
 
 //Components
-import DeleteButton from "../buttons/DeleteButton";
 import UpdateButton from "../buttons/UpdateButton";
 
 //Stors
@@ -25,7 +24,6 @@ const NoteDetail = () => {
         <p>{note.name}</p>
         <p>{note.description}</p>
         <UpdateButton note={note} />
-        <DeleteButton noteId={note.id} />
       </>
     </>
   );

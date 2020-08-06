@@ -14,13 +14,13 @@ import notebookStore from "../../stores/notebookStore";
 const Routes = () => {
   return (
     <Switch>
-      <Route path='/notebooks/:notebookSlug'>
+      <Route path='/notebooks/:notebookId'>
         <NotebookDetail />
       </Route>
       <Route path='/notebooks'>
         <NotebookList />
       </Route>
-      <Route path='/notes/:noteSlug'>
+      <Route path='/notes/:noteId'>
         <NoteDetail />
       </Route>
       <Route path='/notes'>

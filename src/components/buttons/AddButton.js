@@ -2,11 +2,12 @@ import React, { useState } from "react";
 
 //Components
 import NoteModal from "../modals/NoteModal.js";
+import NotebookModal from "../modals/NotebookModal.js";
 
 //Styles
 import { BsPlusCircle } from "react-icons/bs";
 
-const AddButton = ({ createNote }) => {
+const AddButton = ({ note, notebook }) => {
   const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => setIsOpen(false);
   const openModal = () => setIsOpen(true);
@@ -15,11 +16,11 @@ const AddButton = ({ createNote }) => {
     <>
       <BsPlusCircle onClick={openModal} />
 
-      <NoteModal
-        isOpen={isOpen}
-        closeModal={closeModal}
-        createNote={createNote}
-      />
+      {notebook ? (
+        <NoteModal isOpen={isOpen} closeModal={closeModal} />
+      ) : (
+        <NotebookModal isOpen={isOpen} closeModal={closeModal} />
+      )}
     </>
   );
 };
