@@ -17,9 +17,10 @@ class NotebookStore {
 
   createNotebook = async (newNotebook) => {
     try {
-      const formData = new FormData();
-      for (const key in newNotebook) formData.append(key, newNotebook[key]);
-      const res = await axios.post("http://localhost:8000/notebooks", formData);
+      const res = await axios.post(
+        "http://localhost:8000/notebooks",
+        newNotebook
+      );
       this.notebooks.push(res.data);
     } catch (error) {
       console.error("NotebookStore -> createNotebook -> error", error);

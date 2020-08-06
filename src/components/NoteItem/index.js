@@ -11,7 +11,7 @@ import UpdateButton from "../buttons/UpdateButton";
 const NoteItem = ({ note }) => {
   return (
     <>
-      <Link to={`/notes/${note.slug}`}></Link>
+      <Link to={`/notes/${note.id}`}></Link>
       <p>{note.name}</p>
       <UpdateButton note={note} />
     </>
