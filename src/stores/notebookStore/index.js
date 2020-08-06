@@ -56,7 +56,7 @@ class NotebookStore {
   };
 }
 
-decorate(NotebookStore, { notebooks: observable });
+decorate(NotebookStore, { notebooks: observable, loading: observable });
 
 const notebookStore = new NotebookStore();
 notebookStore.fetchNotebook();

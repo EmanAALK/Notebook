@@ -31,42 +31,42 @@ const NoteModel = ({ isOpen, closeModal, oldNote }) => {
       isOpen={isOpen}
       onRequestClose={closeModal}
       style={customStyles}
-      contentLabel='Note Modal'
+      contentLabel="Note Modal"
     >
-      <h3>New Plant</h3>
+      <h3>New Note</h3>
       <form onSubmit={handleSubmit}>
-        <div className='form-group row'>
-          <div className='col-6'>
+        <div className="form-group row">
+          <div className="col-6">
             <label>Name</label>
             <input
               required
-              name='name'
-              type='text'
+              name="name"
+              type="text"
               onChange={handleChange}
-              className='form-control'
+              className="form-control"
               value={note.name}
             />
           </div>
         </div>
-        <div className='form-group'>
+        <div className="form-group">
           <label>Description</label>
           <input
             // required
-            name='description'
-            type='text'
+            name="description"
+            type="text"
             onChange={handleChange}
-            className='form-control'
+            className="form-control"
             value={note.description}
           />
         </div>
-        <div className='form-group'>
+        <div className="form-group">
           <label>Tag</label>
           <input
             // required
-            name='tag'
-            type='file'
+            name="tag"
+            type="file"
             onChange={handleChange}
-            className='form-control'
+            className="form-control"
             value={note.tag}
           />
         </div>

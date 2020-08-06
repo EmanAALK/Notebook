@@ -16,8 +16,7 @@ const NotebookList = ({ notebook }) => {
   ));
   return (
     <>
-      {" "}
-      <Title>Notebooks</Title> {notebookList}
+      <h1>{notebookList}</h1>
     </>
   );
 };

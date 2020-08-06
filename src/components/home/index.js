@@ -1,10 +1,14 @@
 import React from "react";
 
 //Components
-import notebookList from "../NotebookList/index.js";
+import NotebookList from "../NotebookList/index.js";
 
 const Home = () => {
-  return <notebookList />;
+  return (
+    <div>
+      <NotebookList />
+    </div>
+  );
 };
 
 export default Home;

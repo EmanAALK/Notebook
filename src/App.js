@@ -9,7 +9,6 @@ import Routes from "./components/Routers/Routes";
 function App() {
   return (
     <>
-      <Home />
       <Routes />
     </>
   );
